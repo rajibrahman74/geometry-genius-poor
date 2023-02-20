@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Geometry genius poor!</title>
+    <!-- 
+        Tailwind cdn link is associated with HTML
+     -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#f2f2f2] font-sans">
+    <!-- 
+        Header
+     -->
+    <header>
+        <section class="container mx-auto py-5 px-6 bg-[#81c7f0] rounded-lg flex justify-between">
+            <div>
+                <h2 class="text-2xl font-bold">Interactive</h2>
+                <p class=font-semibold text-lg">Geometry Genius Poor</p>
+            </div>
+            <div>
+                <button id="blog-btn"
+                    class="bg-[#1090D8] font-semibold text-lg text-white rounded-lg py-2.5 px-5">Blog</button>
+            </div>
+        </section>
+    </header>
+
+    <!-- 
+        Main
+      -->
+    <main>
+        <section class="container mx-auto my-10 flex justify-between flex-wrap">
+            <section class="max-w-[900px] grid md:grid-cols-3 grid-cols-1 gap-7 mx-auto">
+                <!-- 
+                    Cards
+                 -->
+
+                <!--Triangle-->
+                <div class="card mx-auto flex flex-col gap-y-4 rounded-lg border border-gray-200 py-4 px-6">
+                    <img class="w-[250px]" src="images/triangle.png" alt="">
+                    <h3 class="font-bold text-xl text-center">Triangle</h3>
+                    <p class="text-center text-lg">Area (A) = 0.5 &#215; b &#215; h</p>
+                    <span class="mx-auto">
+                        <span>
+                            <input id="triangle-base-field"
+                                class="w-20 h-9 px-2.5 rounded-lg text-lg bg-white border border-gray-300" type="text"
+                                placeholder="b">
+                            <label class="text-lg" for="#">cm</label>
+                        </span>
+
+                        <span class="pl-2.5">
+                            <input id="triangle-height-field"
+                                class="w-20 h-9 px-2.5 rounded-lg text-lg bg-white border border-gray-300" type="text"
+                                placeholder="h">
+                            <label class="text-lg" for="#">cm</label>
+                        </span>
+                    </span>
+                    <button id="triangle-btn"
+                        class="bg-[#1090D8] font-semibold text-lg text-white rounded-lg py-2.5 px-5">Calculate</button>
+                </div>
+                <!-- 
+                    Rectangle
+                 -->
+                <div class="card mx-auto flex flex-col gap-y-4 rounded-lg border border-gray-200 py-4 px-6">
+                    <img class="w-[250px] mt-9" src="images/rectangle.png" alt="">
+                    <h3 class="font-bold text-xl text-center">Rectangle</h3>
+                    <p class="text-center text-lg">Area (A) = w &#215; l</p>
+                    <span class="mx-auto">
+                        <span>
+                            <input id="rectangle-weight-field"
+                                class="w-20 h-9 px-2.5 rounded-lg text-lg bg-white border border-gray-300" type="text"
+                                placeholder="w">
+                            <label class="text-lg" for="#">cm</label>
+                        </span>
+
+                        <span class="pl-2.5">
+                            <input id="rectangle-length-field"
+                                class="w-20 h-9 px-2.5 rounded-lg text-lg bg-white border border-gray-300" type="text"
+                                placeholder="l">
+                            <label class="text-lg" for="#">cm</label>
+                        </span>
+                    </span>
+                    <button id="rectangle-btn"
+                        class="bg-[#1090D8] font-semibold text-lg text-white rounded-lg py-2.5 px-5">Calculate</button>
+                </div>
+                <!-- 
+                    Parallelogram
+                 -->
+                <div class="card mx-auto flex flex-col gap-y-4 rounded-lg border border-gray-200 py-4 px-6">
+                    <img class="w-[250px] mt-12" src="images/parallelogram.png" alt="">
+                    <h3 class="font-bold text-xl text-center mt-3.5">Parallelogram</h3>
+                    <p class="text-center text-lg">Area (A) = b &#215; h</p>
+                    <p class="text-center text-xl">b=<span id="parallelogram-base-value" class="font-semibold">10</span>
+                        cm, h=<span id="parallelogram-height-value" class="font-semibold">12</span> cm</p>
+                    <button id="parallelogram-btn"
+                        class="bg-[#1090D8] font-semibold text-lg text-white rounded-lg py-2.5 px-5">Calculate</button>
+                </div>
+                <!-- 
+                    Rhombus
+                 -->
+                <div class="card mx-auto flex flex-col gap-y-4 rounded-lg border border-gray-200 py-4 px-6">
+                    <img class="w-[250px] mt-12" src="images/rhombus.png" alt="">
+                    <h3 class="font-bold text-xl text-center">Rhombus</h3>
+                    <p class="text-center text-lg">Area (A) = 0.5 &#215; d<sub>1</sub> &#215; d<sub>2</sub></p>
+                    <p class="text-center text-xl">d<sub>1</sub> =<span id="rhombus-d1-value"
+                            class="font-semibold">16</span> cm,
+                        d<sub>2</sub>= <span id="rhombus-d2-value" class="font-semibold">8</span> cm</p>
+                    <button id="rhombus-btn"
+                        class="bg-[#1090D8] font-semibold text-lg text-white rounded-lg py-2.5 px-5">Calculate</button>
+                </div>
+                <!-- 
+                    Pentagon
+                 -->
+                <div class="card mx-auto flex flex-col gap-y-4 rounded-lg border border-gray-200 py-4 px-6">
+                    <img class="w-[250px]" src="images/pentagon.png" alt="">
+                    <h3 class="font-bold text-xl text-center">Pentagon</h3>
+                    <p class="text-center text-lg">Area (A) = 0.5 &#215; p &#215; b</p>
+                    <p class="text-center text-xl">p = <span id="pentagon-p-value" class="font-semibold">6</span> cm, b
+                        =<span id="pentagon-b-value" class="font-semibold">10</span> cm</p>
+                    <button id="pentagon-btn"
+                        class="bg-[#1090D8] font-semibold text-lg text-white rounded-lg py-2.5 px-5">Calculate</button>
+                </div>
+                <!-- 
+                    Ellipse
+                 -->
+                <div class="card mx-auto flex flex-col gap-y-4 rounded-lg border border-gray-200 py-4 px-6">
+                    <img class="w-[250px] mt-20" src="images/ellipse.png" alt="">
+                    <h3 class="font-bold text-xl text-center">Ellipse</h3>
+                    <p class="text-center text-lg">Area (A) = &#960;ab</p>
+                    <p class="text-center text-xl">a = <span id="ellipse-a-value" class="font-semibold">10</span> cm, b
+                        = <span id="ellipse-b-value" class="font-semibold">4</span> cm</p>
+                    <button id="ellipse-btn"
+                        class="bg-[#1090D8] font-semibold text-lg text-white rounded-lg py-2.5 px-5">Calculate</button>
+                </div>
+
+            </section>
+
+            <!-- 
+                Output all geometry Area
+             -->
+            <section class="w-[380px] max-h-[500px] rounded-lg border-2 border-gray-200 py-4 px-3 mx-auto">
+                <h3 class="font-semibold text-center border-b-2 border-black text-2xl">Area Calculation</h3>
+                <div id="triangle-area-total" class="hidden mx-auto">
+                    <span class="flex items-center justify-between gap-x-5 mt-4">
+                        <p class="text-md">Triangle Area = <span id="triangle-area-output"
+                                class="font-semibold">0</span>cm<sup>2</sup></p>
+                        <button class="bg-[#1090D8] font-semibold text-md text-white rounded-lg py-1.5 px-2.5">Covert to
+                            m<sup>2</sup></button>
+                    </span>
+                </div>
+
+                <div id="rectangle-area-total" class="hidden mx-auto">
+                    <span class="flex items-center justify-between gap-x-5 mt-4">
+                        <p class="text-md">Rectangle Area = <span id="rectangle-area-output"
+                                class="font-semibold">00</span>cm<sup>2</sup></p>
+                        <button class="bg-[#1090D8] font-semibold text-md text-white rounded-lg py-1.5 px-2.5">Covert to
+                            m<sup>2</sup></button>
+                    </span>
+                </div>
+
+                <div id="parallelogram-area-total" class="hidden mx-auto">
+                    <span class="flex items-center justify-between gap-x-5 mt-4">
+                        <p class="text-md">Parallelogram Area =<span id="parallelogram-area-output"
+                                class="font-semibold">00</span>cm<sup>2</sup></p>
+                        <button class="bg-[#1090D8] font-semibold text-md text-white rounded-lg py-1.5 px-2.5">Covert to
+                            m<sup>2</sup></button>
+                    </span>
+                </div>
+
+                <div id="rhombus-area-total" class="hidden mx-auto">
+                    <span class="flex items-center justify-between gap-x-5 mt-4">
+                        <p class="text-md">Rhombus Area = <span id="rhombus-area-output"
+                                class="font-semibold">00</span>cm<sup>2</sup></p>
+                        <button class="bg-[#1090D8] font-semibold text-md text-white rounded-lg py-1.5 px-2.5">Covert to
+                            m<sup>2</sup></button>
+                    </span>
+                </div>
+
+                <div id="pentagon-area-total" class="hidden mx-auto">
+                    <span class="flex items-center justify-between gap-x-5 mt-4">
+                        <p class="text-md">Pentagon Area = <span id="pentagon-area-output"
+                                class="font-semibold">00</span>cm<sup>2</sup></p>
+                        <button class="bg-[#1090D8] font-semibold text-md text-white rounded-lg py-1.5 px-2.5">Covert to
+                            m<sup>2</sup></button>
+                    </span>
+                </div>
+
+                <div id="ellipse-area-total" class="hidden mx-auto">
+                    <span class="flex items-center justify-between gap-x-5 mt-4">
+                        <p class="text-md">Ellipse Area = <span id="ellipse-area-output"
+                                class="font-semibold">00</span>cm<sup>2</sup></p>
+                        <button class="bg-[#1090D8] font-semibold text-md text-white rounded-lg py-1.5 px-2.5">Covert to
+                            m<sup>2</sup></button>
+                    </span>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- 
+        JS files link is associated with HTLML
+     -->
+    <script src="js/utilities.js"></script>
+    <script src="js/calculation.js"></script>
+    <script src="js/dynamic.js"></script>
+
+</body>
+
+</html>
